@@ -70,7 +70,9 @@ const Home = () => {
         <div className="App">
           <RotatingCard />
         </div>
+        <footer>© Joey Lu </footer>
       </div>
+      
     </div>
   );
 };

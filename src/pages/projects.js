@@ -12,22 +12,25 @@ const Projects = () => {
     duration: 5 + Math.random() * 5,
   }));
   const [repos, setRepos] = useState([]);
-  const selectedProjects = ["tracksite", "SoundVeil", "stubook_master"];
+  const selectedProjects = ["tracksite", "SoundVeil", "stubook_master", "website"];
   const nameMap = {
     tracksite: "TrackSite",
     SoundVeil: "SoundVeil",
     stubook_master: "Stubook",
+    website: "This Website"
   };
 
   const descriptionMap = {
     tracksite: "A bookmark manager for everything!",
     stubook_master: "Your all in one student handbook",
     SoundVeil: "Audio steganography and decryption",
+
   };
   const tagsMap = {
     tracksite: ["React", "SQL", "Python", "JavaScript"],
     stubook_master: ["Flutter", "Dart"],
     SoundVeil: ["HTML", "CSS", "JavaScript"],
+    website: ["React", "JavaScript"],
   };
   useEffect(() => {
     const fetchRepos = async () => {

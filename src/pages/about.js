@@ -3,6 +3,7 @@
 import React from "react";
 import Star from "../components/Star";
 import "./About.css";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const stars = Array.from({ length: 100 }, (_, i) => ({
@@ -40,7 +41,7 @@ const About = () => {
             with fellow peers, and deepen my knowledge.
           </p>
           <p>
-            Feel free to <a href="./Projects">explore my projects</a> or get in
+            Feel free to <Link to="/projects">explore my projects</Link> or get in
             touch with me at lujoey886@gmail.com.
           </p>
         </div>

@@ -117,3 +117,12 @@
     text-align: center; 
   }
 }
+
+footer {
+  position: fixed;
+  text-align: center;
+  padding: 10px 0;
+  color: #ffffff;
+  font-size: 7px;
+  bottom: 0;
+}
