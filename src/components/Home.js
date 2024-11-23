@@ -34,7 +34,7 @@ const Home = () => {
           <p className="bio-text">Building cool stuff</p>
           <div className="social-icons">
             <a
-              href="https://www.linkedin.com/in/your-linkedin-profile"
+              href="https://www.linkedin.com/in/joeyhlu"
               target="_blank"
               rel="noopener noreferrer"
               class="fa-cog"
@@ -42,7 +42,7 @@ const Home = () => {
               <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>
             <a
-              href="https://github.com/your-github-username"
+              href="https://www.github.com/joeyhlu"
               target="_blank"
               rel="noopener noreferrer"
               class="fa-cog"
@@ -50,7 +50,7 @@ const Home = () => {
               <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
             <a
-              href="https://github.com/your-github-username"
+              href="mailto:lujoey886@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               class="fa-cog"
@@ -59,14 +59,9 @@ const Home = () => {
             </a>
           </div>
           <div className="button-group">
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="custom-button"
-            >
-              About Me
-            </a>
+          <Link to="/about" className="custom-button">
+              About me
+            </Link>
             <Link to="/projects" className="custom-button">
               View Projects
             </Link>
