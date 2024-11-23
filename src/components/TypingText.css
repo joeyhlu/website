@@ -1,0 +1,21 @@
+.typing-text {
+  display: inline-block;
+  color: white;
+  font-size: 50px;
+  font-family: monospace;
+  white-space: nowrap;
+  font-weight: bold;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(255, 255, 255);
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(255, 255, 255);
+  }
+}

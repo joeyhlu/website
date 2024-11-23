@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+.sky {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    to right,
+    rgb(111, 191, 241),
+    rgb(44, 97, 255)
+  );
+  background-size: cover;
+  overflow-y: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.bio-text {
+  margin-top: 20px;
+  font-size: 24px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.typing-container {
+  position: absolute;
+  top: 50%;
+  left: 53.5%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+.container {
+  position: relative; 
+  width: 100%;
+  height: 100%;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+.custom-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: rgba(red, green, blue, 0);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+  border: 2px solid #ffffff;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.custom-button:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: scale(1.1);
+}
+
+.custom-button:active {
+  transform: scale(0.98);
+}
+
+.button-group {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.fa-cog {
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .home-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .home-content .typing-container,
+  .home-content .rotating-card-container {
+    position: relative;
+    transform: none; 
+    margin: 10px 0;
+    width: 100%;
+    max-width: 500px; 
+    left: auto; 
+    top: auto; 
+    transform: none; 
+  }
+
+  
+  .home-content .rotating-card-container {
+    width: 180px;
+    height: 180px;
+    transform: scale(0.7);
+  }
+
+ 
+  .home-content .typing-container {
+    text-align: center; 
   }
 }
