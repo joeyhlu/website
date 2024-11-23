@@ -20,7 +20,8 @@ body {
 .project-title {
   color: white;
   font-size: 40px;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: Tahoma;
 }
 .project-link a {
   color: rgb(255, 255, 255);
