@@ -10,6 +10,7 @@
   animation-name: rise;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  z-index: 1;
 }
 
 @keyframes rise {
