@@ -34,7 +34,7 @@ const Home = () => {
           <p className="bio-text">Building cool stuff</p>
           <div className="social-icons">
             <a
-              href="https://www.linkedin.com/in/joeyhlu"
+              href="https://www.linkedin.com/in/joey-lu-451329309/"
               target="_blank"
               rel="noopener noreferrer"
               class="fa-cog"

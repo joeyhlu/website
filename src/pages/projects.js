@@ -27,7 +27,7 @@ const Projects = () => {
 
   };
   const tagsMap = {
-    tracksite: ["React", "SQL", "Python", "JavaScript"],
+    tracksite: ["React", "SQL", "Python", "JavaScript", "FastAPI"],
     stubook_master: ["Flutter", "Dart"],
     SoundVeil: ["HTML", "CSS", "JavaScript"],
     website: ["React", "JavaScript"],
