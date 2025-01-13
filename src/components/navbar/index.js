@@ -16,17 +16,18 @@ const Navbar = () => {
           Blogs
         </NavLink>
         <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            textDecoration: "none",
-            color: "white",
-            padding: "0 1rem",
-            fontSize: "1rem",
-          }}>
-          Resume
-        </a>
+  href="/website/resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    textDecoration: "none",
+    color: "white",
+    padding: "0 1rem",
+    fontSize: "1rem",
+  }}
+>
+  Resume
+</a>
       </NavMenu>
     </Nav>
   );
