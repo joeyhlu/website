@@ -1,5 +1,3 @@
-// components/Navbar/navbarelements.js
-
 import { FaBars } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
@@ -58,7 +56,14 @@ export const NavMenu = styled.div`
   display: flex;
   align-items: center;
   @media screen and (max-width: 768px) {
-    display: none;
+    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    padding: 1rem;
   }
 `;
 
