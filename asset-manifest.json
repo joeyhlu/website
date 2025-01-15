@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.8bbbf2a9.css",
+    "main.css": "/website/static/css/main.d37526db.css",
     "main.js": "/website/static/js/main.74862c9a.js",
     "static/media/oar2.jpg": "/website/static/media/oar2.5e8605cbbdd7dad16564.jpg",
     "index.html": "/website/index.html",
-    "main.8bbbf2a9.css.map": "/website/static/css/main.8bbbf2a9.css.map",
+    "main.d37526db.css.map": "/website/static/css/main.d37526db.css.map",
     "main.74862c9a.js.map": "/website/static/js/main.74862c9a.js.map"
   },
   "entrypoints": [
-    "static/css/main.8bbbf2a9.css",
+    "static/css/main.d37526db.css",
     "static/js/main.74862c9a.js"
   ]
 }
