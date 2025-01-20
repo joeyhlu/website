@@ -14,6 +14,7 @@ const Projects = () => {
 
   const [repos, setRepos] = useState([]);
 
+  // Projects you want to display
   const selectedProjects = [
     "uofthacks",
     "tracksite",
@@ -31,23 +32,11 @@ const Projects = () => {
   };
 
   const descriptionMap = {
-    uofthacks: (
-      <>
-        A CLI tool to scan code repos for sensitive data leaks and vulnerabilities{" "}
-        <a
-          href="https://apigonekaboomhelp.us/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "#1e90ff", textDecoration: "underline" }}
-        >
-          Documentation
-        </a>
-      </>
-    ),
+    uofthacks:
+"A CLI tool to scan code repos for sensitive data leaks and vulnerabilities",
     tracksite: "A bookmark manager for everything!",
     stubook_master: "Your all in one student handbook",
     SoundVeil: "Audio steganography and decryption",
-    website: "Personal portfolio website showcasing projects and skills.",
   };
 
   const tagsMap = {
@@ -57,6 +46,7 @@ const Projects = () => {
     SoundVeil: ["HTML", "CSS", "JavaScript"],
     website: ["React", "JavaScript"],
   };
+
 
   const docLinkMap = {
     uofthacks: "https://apigonekaboomhelp.us/",
@@ -99,7 +89,7 @@ const Projects = () => {
           flexWrap: "wrap",
           gap: "20px",
           justifyContent: "center",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gridTemplateColumns: "repeat(2, 400px)",
         }}
       >
         {repos.map((repo) => {
@@ -112,7 +102,7 @@ const Projects = () => {
                   src={`./${repo.name}.png`}
                   alt={repo.name}
                   style={{
-                    width: "100%",
+                    width: "375px",
                     borderRadius: "5px",
                     height: "250px",
                     objectFit: "cover",
@@ -125,7 +115,6 @@ const Projects = () => {
                   href={docLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: "#1e90ff", textDecoration: "none" }}
                 >
                   {nameMap[repo.name]}
                 </a>
