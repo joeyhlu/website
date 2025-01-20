@@ -14,7 +14,6 @@ const Projects = () => {
 
   const [repos, setRepos] = useState([]);
 
-  // Projects you want to display
   const selectedProjects = [
     "uofthacks",
     "tracksite",
