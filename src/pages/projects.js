@@ -34,7 +34,7 @@ const Projects = () => {
   };
 
   const descriptionMap = {
-    qhacks2025: "A 3D visualiser that augments reality in real time",
+    qhacks2025: "A 3D visualiser that augments reality in real time | Hackathon Winner",
     uofthacks:
 "A CLI tool to scan code repos for sensitive data leaks and vulnerabilities",
     tracksite: "A bookmark manager for everything!",
