@@ -16,6 +16,7 @@ const Projects = () => {
 
   // Projects you want to display
   const selectedProjects = [
+    "qhacks2025",
     "uofthacks",
     "tracksite",
     "SoundVeil",
@@ -24,6 +25,7 @@ const Projects = () => {
   ];
 
   const nameMap = {
+    qhacks2025: "Visualise It",
     uofthacks: "ProteccAPI",
     tracksite: "TrackSite",
     SoundVeil: "SoundVeil",
@@ -32,6 +34,7 @@ const Projects = () => {
   };
 
   const descriptionMap = {
+    qhacks2025: "A 3D visualiser that augments reality in real time",
     uofthacks:
 "A CLI tool to scan code repos for sensitive data leaks and vulnerabilities",
     tracksite: "A bookmark manager for everything!",
@@ -40,6 +43,7 @@ const Projects = () => {
   };
 
   const tagsMap = {
+    qhacks2025: ["Python", "Pytorch", "OpenCV", "HuggingFace", "NumPy"],
     uofthacks: ["Node.js", "React", "CSS"],
     tracksite: ["React", "SQL", "Python", "JavaScript", "FastAPI"],
     stubook_master: ["Flutter", "Dart", "iOS", "Android"],
