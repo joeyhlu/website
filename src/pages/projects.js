@@ -22,10 +22,12 @@ const Projects = () => {
     "SoundVeil",
     "stubook_master",
     "website",
+    "Tower-Defense",
   ];
 
   const nameMap = {
-    qhacks2025: "Visualise It",
+    "Tower-Defense": "Plants vs Zombies Tower Defense Remake",
+    "qhacks2025": "Visualise It",
     uofthacks: "ProteccAPI",
     tracksite: "TrackSite",
     SoundVeil: "SoundVeil",
@@ -34,7 +36,8 @@ const Projects = () => {
   };
 
   const descriptionMap = {
-    qhacks2025: "A 3D visualiser that augments reality in real time | Hackathon Winner",
+    "Tower-Defense": "Tower Defense",
+    "qhacks2025": "A 3D visualiser that augments reality in real time | Hackathon Winner",
     uofthacks:
 "A CLI tool to scan code repos for sensitive data leaks and vulnerabilities",
     tracksite: "A bookmark manager for everything!",
@@ -43,7 +46,8 @@ const Projects = () => {
   };
 
   const tagsMap = {
-    qhacks2025: ["Python", "Pytorch", "OpenCV", "HuggingFace", "NumPy"],
+    "Tower-Defense": ["C#", "Unity"],
+    "qhacks2025": ["Python", "Pytorch", "OpenCV", "HuggingFace", "NumPy"],
     uofthacks: ["Node.js", "React", "CSS"],
     tracksite: ["React", "SQL", "Python", "JavaScript", "FastAPI"],
     stubook_master: ["Flutter", "Dart", "iOS", "Android"],
