@@ -91,6 +91,7 @@ const Projects = () => {
         />
       ))}
       <p className="project-title">My Projects</p>
+      <p className = "project-bar">More on my Github!</p>
       <div
         style={{
           display: "grid",
