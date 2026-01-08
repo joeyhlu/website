@@ -17,7 +17,7 @@ const Home = () => {
       <header className="header">
         <Link to="/" className="logo">Joey Lu</Link>
         <nav className="nav-links">
-          <a href="#education">Education</a>
+          <Link to="/about">About</Link>
           <a href="#experience">Experience</a>
           <Link to="/projects">Projects</Link>
         </nav>
