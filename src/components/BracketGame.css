@@ -1,0 +1,159 @@
+.game-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.game-container {
+  background: #1a1a1a;
+  border-radius: 16px;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.game-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #888;
+  font-size: 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.game-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0 0.25rem;
+}
+
+.game-title {
+  font-family: 'Courier New', monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.game-score {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.game-area {
+  background: linear-gradient(180deg, #0d1117 0%, #161b22 100%);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #30363d;
+}
+
+.bracket-player {
+  position: absolute;
+  left: 50px;
+  font-family: 'Courier New', monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #58a6ff;
+  text-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+  transition: transform 0.1s;
+  user-select: none;
+}
+
+.pipe {
+  position: absolute;
+  background: linear-gradient(90deg, #238636 0%, #2ea043 50%, #238636 100%);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(46, 160, 67, 0.3);
+}
+
+.pipe-top {
+  top: 0;
+  border-radius: 0 0 8px 8px;
+}
+
+.pipe-top .pipe-text {
+  position: absolute;
+  bottom: 8px;
+}
+
+.pipe-bottom {
+  border-radius: 8px 8px 0 0;
+}
+
+.pipe-bottom .pipe-text {
+  position: absolute;
+  top: 8px;
+}
+
+.pipe-text {
+  font-family: 'Courier New', monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.game-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.game-message p {
+  margin: 0.5rem 0;
+}
+
+.game-message .game-hint {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.game-over .final-score {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #58a6ff;
+}
+
+.game-instructions {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #666;
+  font-family: 'Courier New', monospace;
+}
+
