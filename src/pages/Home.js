@@ -1,117 +1,65 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
-import BracketGame from '../components/BracketGame';
 import '../styles/Home.css';
 
 const Home = () => {
-  const [showGame, setShowGame] = useState(false);
-
   return (
     <div className="home-container">
-      {/* Game Modal */}
-      {showGame && <BracketGame onClose={() => setShowGame(false)} />}
-
-      {/* Header */}
       <header className="header">
-        <Link to="/" className="logo">Joey Lu</Link>
-        <nav className="nav-links">
-          <Link to="/about">About</Link>
-          <a href="#experience">Experience</a>
-          <Link to="/projects">Projects</Link>
-        </nav>
-        <div className="header-actions">
-          <a href="https://www.github.com/joeyhlu" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-          <a href="https://www.linkedin.com/in/joey-lu-451329309/" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faXTwitter} />
-          </a>
+        <div className="header-left">
+          <Link to="/" className="logo">joey lu</Link>
+          <span className="tagline">building things that work</span>
         </div>
+        <nav className="nav-links">
+          <Link to="/about">me</Link>
+          <Link to="/projects">stuff</Link>
+          <Link to="/blogs">writing</Link>
+        </nav>
       </header>
 
-      {/* Hero Section */}
-      <section className="hero">
-        <h1 className="hero-text">
-          Using <em>software engineering + problem solving</em> to create elegant and scalable solutions to <em>real world problems</em>
-        </h1>
-      </section>
+      <main className="home-content">
+        <p className="intro">
+          CS @ UWaterloo. Full-stack dev, AI, systems.
+        </p>
 
-      {/* Education Section */}
-      <section className="section" id="education">
-        <h2 className="section-title">Education</h2>
-        <div className="card">
-          <div className="card-logo">🎓</div>
-          <div className="card-content">
-            <div className="card-header-row">
-              <h3 className="card-name">University of Waterloo</h3>
-              <span className="card-date">Sep 2024 – Present</span>
-            </div>
-            <p className="card-role">Bachelor of Computer Science</p>
-            <p className="card-location">Waterloo, ON</p>
-          </div>
+        <ul className="top-list">
+          <li>Claude Ambassador <a href="https://anthropic.com" target="_blank" rel="noopener noreferrer"><strong>@Anthropic</strong></a></li>
+          <li>Statistical Developer Intern <a href="https://www.statcan.gc.ca" target="_blank" rel="noopener noreferrer"><strong>@Statistics Canada</strong></a></li>
+        </ul>
+
+        <ul className="top-list">
+          <li className="section-label">what i've been building:</li>
+        </ul>
+        <ul className="sub-list">
+          <li>built <a href="https://github.com/jkhatri23/Valuedex" target="_blank" rel="noopener noreferrer"><strong>ValueDex</strong></a>, a Pokémon card value predictor with ML (<a href="https://valuedex.ca" target="_blank" rel="noopener noreferrer">valuedex.ca</a>)</li>
+          <li>built <a href="https://github.com/joeyhlu/quantara" target="_blank" rel="noopener noreferrer"><strong>Quantara</strong></a>, a full-stack trading platform with WebSockets, sentiment, and Dockerized services</li>
+          <li>built <a href="https://github.com/joeyhlu/qhacks2025" target="_blank" rel="noopener noreferrer"><strong>Visualise It</strong></a>, real-time design visualisation with GenAI &mdash; QHacks Mayor&apos;s Innovation Challenge</li>
+          <li>built <a href="https://github.com/joeyhlu/uofthacks" target="_blank" rel="noopener noreferrer"><strong>ProteccAPI</strong></a>, NPM + VSCode tooling for API key security (100+ downloads)</li>
+        </ul>
+
+        <ul className="top-list">
+          <li className="section-label">previously:</li>
+        </ul>
+        <ul className="sub-list">
+          <li>Intern <a href="https://windscribe.com" target="_blank" rel="noopener noreferrer"><strong>Windscribe</strong></a></li>
+          <li>Autonomy Software <a href="https://waterlooaerialrobotics.com" target="_blank" rel="noopener noreferrer"><strong>Waterloo Aerial Robotics</strong></a></li>
+        </ul>
+
+        <div className="cta-section">
+          <Link to="/about" className="cta-button">
+            <span className="cta-text">more about me</span>
+            <span className="cta-arrow">&rarr;</span>
+          </Link>
         </div>
-      </section>
+      </main>
 
-      {/* Experience Section */}
-      <section className="section" id="experience">
-        <h2 className="section-title">Experience</h2>
-        
-        <div className="card">
-          <div className="card-logo">🛡️</div>
-          <div className="card-content">
-            <div className="card-header-row">
-              <h3 className="card-name">Windscribe Inc</h3>
-              <span className="card-date">May 2025 – Aug 2025</span>
-            </div>
-            <p className="card-role">Support System Engineer Intern</p>
-            <p className="card-location">Toronto, ON</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="card-logo">🤖</div>
-          <div className="card-content">
-            <div className="card-header-row">
-              <h3 className="card-name">Waterloo Aerial Robotics</h3>
-              <span className="card-date">Nov 2024 – Apr 2025</span>
-            </div>
-            <p className="card-role">Autonomy Software Developer</p>
-            <p className="card-location">Waterloo, ON</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="card-logo">🌐</div>
-          <div className="card-content">
-            <div className="card-header-row">
-              <h3 className="card-name">SoarToWorld</h3>
-              <span className="card-date">Dec 2023 – Mar 2024</span>
-            </div>
-            <p className="card-role">Web Developer Intern</p>
-            <p className="card-location">Richmond Hill, ON</p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="section cta-section">
-        <Link to="/projects" className="cta-button">
-          see what i've built →
-        </Link>
-        <button className="game-button" onClick={() => setShowGame(true)}>
-          play a game 🎮
-        </button>
-      </section>
-
-      {/* Footer */}
       <footer className="footer">
-        <div className="footer-line"></div>
-        <p>{new Date().getFullYear()} © Joey Lu</p>
+        <div className="footer-links">
+          <a href="https://www.github.com/joeyhlu" target="_blank" rel="noopener noreferrer">github</a>
+          <a href="https://www.linkedin.com/in/joey-lu-451329309/" target="_blank" rel="noopener noreferrer">linkedin</a>
+          <a href="mailto:lujoey886@gmail.com">email</a>
+        </div>
+        <p>{new Date().getFullYear()} &copy; Joey Lu</p>
       </footer>
     </div>
   );

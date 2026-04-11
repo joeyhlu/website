@@ -8,9 +8,11 @@ import BlogPost from './pages/BlogPost';
 import './App.css';
 
 function App() {
+  const basename = (process.env.PUBLIC_URL || '').replace(/\/$/, '') || '/';
+
   return (
     <div className="App">
-      <Router>
+      <Router basename={basename}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
