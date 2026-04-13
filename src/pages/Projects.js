@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import PageLayout from '../components/PageLayout';
-import imgValuedex from '../assets/project-previews/valuedex.svg';
-import imgQuantara from '../assets/project-previews/quantara.svg';
+import imgValuedex from '../assets/project-previews/valuedex.png';
+import imgQuantara from '../assets/project-previews/quantara.png';
 import imgQhacks from '../assets/project-previews/qhacks2025.png';
 import imgUofthacks from '../assets/project-previews/uofthacks.png';
 import imgTracksite from '../assets/project-previews/tracksite.png';
@@ -27,13 +27,13 @@ const projects = [
   {
     id: 'quantara',
     name: 'Quantara',
-    repoUrl: 'https://github.com/joeyhlu/quantara',
+    repoUrl: 'https://github.com/achitaan/Quantara',
     image: imgQuantara,
     description: 'Full-stack trading platform with real-time WebSocket alerts, sentiment analysis, and Dockerized microservices.',
     detail:
       'FastAPI backend for cashflow, forecasting, anomaly detection, Plaid, and streaming alerts; React/Next.js dashboards and chatbots; Dockerized ingestion, sentiment, and execution services for low-latency workflows.',
     tags: ['TypeScript', 'Next.js', 'FastAPI', 'Docker', 'TensorFlow'],
-    starSource: { owner: 'joeyhlu', repo: 'quantara' },
+    starSource: { owner: 'achitaan', repo: 'Quantara' },
   },
   {
     id: 'visualise-it',
@@ -118,6 +118,12 @@ const Projects = () => {
         try {
           const vd = await axios.get('https://api.github.com/repos/jkhatri23/Valuedex');
           starMap['jkhatri23/Valuedex'] = vd.data.stargazers_count;
+        } catch {
+          /* optional */
+        }
+        try {
+          const qa = await axios.get('https://api.github.com/repos/achitaan/Quantara');
+          starMap['achitaan/Quantara'] = qa.data.stargazers_count;
         } catch {
           /* optional */
         }

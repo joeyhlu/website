@@ -32,7 +32,7 @@ const Home = () => {
         </ul>
         <ul className="sub-list">
           <li>built <a href="https://github.com/jkhatri23/Valuedex" target="_blank" rel="noopener noreferrer"><strong>ValueDex</strong></a>, a Pokémon card value predictor with ML (<a href="https://valuedex.ca" target="_blank" rel="noopener noreferrer">valuedex.ca</a>)</li>
-          <li>built <a href="https://github.com/joeyhlu/quantara" target="_blank" rel="noopener noreferrer"><strong>Quantara</strong></a>, a full-stack trading platform with WebSockets, sentiment, and Dockerized services</li>
+          <li>built <a href="https://github.com/achitaan/Quantara" target="_blank" rel="noopener noreferrer"><strong>Quantara</strong></a>, a full-stack trading platform with WebSockets, sentiment, and Dockerized services</li>
           <li>built <a href="https://github.com/joeyhlu/qhacks2025" target="_blank" rel="noopener noreferrer"><strong>Visualise It</strong></a>, real-time design visualisation with GenAI &mdash; QHacks Mayor&apos;s Innovation Challenge</li>
           <li>built <a href="https://github.com/joeyhlu/uofthacks" target="_blank" rel="noopener noreferrer"><strong>ProteccAPI</strong></a>, NPM + VSCode tooling for API key security (100+ downloads)</li>
         </ul>
