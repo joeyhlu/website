@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/static/css/main.460e1e1a.css",
-    "main.js": "/static/js/main.b6324407.js",
+    "main.js": "/static/js/main.6f084997.js",
     "static/media/SoundVeil.png": "/static/media/SoundVeil.3c98bf33fedaf8cdc719.png",
     "static/media/website.png": "/static/media/website.1313fd61c46b6e1d2273.png",
     "static/media/stubook_master.png": "/static/media/stubook_master.58cce9016cde0a317c51.png",
     "static/media/qhacks2025.png": "/static/media/qhacks2025.dfaa8584bc8fc76d70f4.png",
     "static/media/tracksite.png": "/static/media/tracksite.936b0441f5f05f7d273e.png",
     "static/media/uofthacks.png": "/static/media/uofthacks.b76a6634e1c1176ce06a.png",
+    "static/media/valuedex.png": "/static/media/valuedex.d3ff2f1e874b00f7e55e.png",
+    "static/media/quantara.png": "/static/media/quantara.d7624ae690f49d7744bd.png",
     "index.html": "/index.html",
-    "static/media/valuedex.svg": "/static/media/valuedex.22cb1772a98f680f98ce39d15abf5b7f.svg",
-    "static/media/quantara.svg": "/static/media/quantara.2d41b28e4124a4977fb0d3b6b8a053e7.svg",
     "main.460e1e1a.css.map": "/static/css/main.460e1e1a.css.map",
-    "main.b6324407.js.map": "/static/js/main.b6324407.js.map"
+    "main.6f084997.js.map": "/static/js/main.6f084997.js.map"
   },
   "entrypoints": [
     "static/css/main.460e1e1a.css",
-    "static/js/main.b6324407.js"
+    "static/js/main.6f084997.js"
   ]
 }
