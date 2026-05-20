@@ -16,7 +16,7 @@ const About = () => {
               I like shipping tools people use, digging into data and systems, and learning how ML fits real workflows.
             </p>
             <p>
-              I&apos;m a <strong>Claude Ambassador</strong> with{' '}
+              I&apos;m a <strong>Claude Campus Ambassador</strong> with{' '}
               <a href="https://anthropic.com" target="_blank" rel="noopener noreferrer">Anthropic</a>, helping run campus
               programs around agent-style development and MCP. I&apos;ve also been a{' '}
               <strong>Statistical Developer Intern</strong> at{' '}
@@ -70,7 +70,7 @@ const About = () => {
         <section className="about-section about-section--cta">
           <h2>Projects</h2>
           <p className="about-cta-lead">
-            ValueDex, Quantara, Visualise It, ProteccAPI, and more — write-ups, tags, and links live on the projects page.
+            ValueDex, Quantara, CourseCraft, Visualise It, ProteccAPI, and more — write-ups, tags, and links live on the projects page.
           </p>
           <Link to="/projects" className="about-to-projects">
             <span>open projects</span>

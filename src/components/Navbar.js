@@ -69,9 +69,6 @@ const Navbar = () => {
         <Link to="/projects" style={{ color: '#fff', textDecoration: 'none', padding: '0 1rem', fontSize: '1.2rem' }}>
           Projects
         </Link>
-        <Link to="/blogs" style={{ color: '#fff', textDecoration: 'none', padding: '0 1rem', fontSize: '1.2rem' }}>
-          Blogs
-        </Link>
         <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none', padding: '0 1rem', fontSize: '1.2rem' }}>
           Resume
         </a>

@@ -3,6 +3,7 @@ import axios from 'axios';
 import PageLayout from '../components/PageLayout';
 import imgValuedex from '../assets/project-previews/valuedex.png';
 import imgQuantara from '../assets/project-previews/quantara.png';
+import imgCoursecraft from '../assets/project-previews/coursecraft.svg';
 import imgQhacks from '../assets/project-previews/qhacks2025.png';
 import imgUofthacks from '../assets/project-previews/uofthacks.png';
 import imgTracksite from '../assets/project-previews/tracksite.png';
@@ -34,6 +35,17 @@ const projects = [
       'FastAPI backend for cashflow, forecasting, anomaly detection, Plaid, and streaming alerts; React/Next.js dashboards and chatbots; Dockerized ingestion, sentiment, and execution services for low-latency workflows.',
     tags: ['TypeScript', 'Next.js', 'FastAPI', 'Docker', 'TensorFlow'],
     starSource: { owner: 'achitaan', repo: 'Quantara' },
+  },
+  {
+    id: 'coursecraft',
+    name: 'CourseCraft',
+    repoUrl: 'https://github.com/joeyhlu/coursecraft',
+    image: imgCoursecraft,
+    description: 'Smart course scheduling — natural-language preferences, ranked timetables, and Rate My Prof data.',
+    detail:
+      'Express backend and vanilla HTML/CSS/JS frontend: natural-language planner, constraint-based schedule generation with walking-time checks, professor ratings inline, primary/backup courses, seat warnings, catalog browse, and a friends overlay to compare timetables.',
+    tags: ['Node.js', 'Express', 'JavaScript'],
+    starSource: { owner: 'joeyhlu', repo: 'coursecraft' },
   },
   {
     id: 'visualise-it',
@@ -97,7 +109,7 @@ const projects = [
     image: imgWebsite,
     description: 'This portfolio — React, routing, and a clean reading experience.',
     detail:
-      'The site you are on: client-side routing, project showcase, blog-style pages, and deployment tuned for a custom domain on static hosting.',
+      'The site you are on: client-side routing, project showcase, and deployment tuned for a custom domain on static hosting.',
     tags: ['React', 'JavaScript'],
     starSource: { owner: 'joeyhlu', repo: 'website' },
   },

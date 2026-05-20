@@ -13,7 +13,6 @@ const Home = () => {
         <nav className="nav-links">
           <Link to="/about">me</Link>
           <Link to="/projects">stuff</Link>
-          <Link to="/blogs">writing</Link>
         </nav>
       </header>
 
@@ -23,7 +22,7 @@ const Home = () => {
         </p>
 
         <ul className="top-list">
-          <li>Claude Ambassador <a href="https://anthropic.com" target="_blank" rel="noopener noreferrer"><strong>@Anthropic</strong></a></li>
+          <li>Claude Campus Ambassador <a href="https://anthropic.com" target="_blank" rel="noopener noreferrer"><strong>@Anthropic</strong></a></li>
           <li>Statistical Developer Intern <a href="https://www.statcan.gc.ca" target="_blank" rel="noopener noreferrer"><strong>@Statistics Canada</strong></a></li>
         </ul>
 

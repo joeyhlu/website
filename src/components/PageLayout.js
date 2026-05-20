@@ -10,7 +10,6 @@ const PageLayout = ({ children, title }) => {
         <nav className="nav-links">
           <Link to="/about">about</Link>
           <Link to="/projects">projects</Link>
-          <Link to="/blogs">writing</Link>
         </nav>
       </header>
 
