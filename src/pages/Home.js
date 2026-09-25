@@ -22,14 +22,15 @@ const Home = () => {
         </p>
 
         <ul className="top-list">
+          <li>SWE Intern <a href="https://www.telus.com" target="_blank" rel="noopener noreferrer"><strong>@TELUS</strong></a></li>
           <li>Claude Campus Ambassador <a href="https://anthropic.com" target="_blank" rel="noopener noreferrer"><strong>@Anthropic</strong></a></li>
-          <li>Statistical Developer Intern <a href="https://www.statcan.gc.ca" target="_blank" rel="noopener noreferrer"><strong>@Statistics Canada</strong></a></li>
         </ul>
 
         <ul className="top-list">
           <li className="section-label">what i've been building:</li>
         </ul>
         <ul className="sub-list">
+          <li>built <a href="https://devpost.com/software/tailsignal" target="_blank" rel="noopener noreferrer"><strong>PawTrace</strong></a>, a missing-pet search platform &mdash; Hack the North winner</li>
           <li>built <a href="https://github.com/jkhatri23/Valuedex" target="_blank" rel="noopener noreferrer"><strong>ValueDex</strong></a>, a Pokémon card value predictor with ML (<a href="https://valuedex.ca" target="_blank" rel="noopener noreferrer">valuedex.ca</a>)</li>
           <li>built <a href="https://github.com/achitaan/Quantara" target="_blank" rel="noopener noreferrer"><strong>Quantara</strong></a>, a full-stack trading platform with WebSockets, sentiment, and Dockerized services</li>
           <li>built <a href="https://github.com/joeyhlu/qhacks2025" target="_blank" rel="noopener noreferrer"><strong>Visualise It</strong></a>, real-time design visualisation with GenAI &mdash; QHacks Mayor&apos;s Innovation Challenge</li>
@@ -40,6 +41,7 @@ const Home = () => {
           <li className="section-label">previously:</li>
         </ul>
         <ul className="sub-list">
+          <li>Statistical Developer Intern <a href="https://www.statcan.gc.ca" target="_blank" rel="noopener noreferrer"><strong>Statistics Canada</strong></a></li>
           <li>Intern <a href="https://windscribe.com" target="_blank" rel="noopener noreferrer"><strong>Windscribe</strong></a></li>
           <li>Autonomy Software <a href="https://waterlooaerialrobotics.com" target="_blank" rel="noopener noreferrer"><strong>Waterloo Aerial Robotics</strong></a></li>
         </ul>

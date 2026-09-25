@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import PageLayout from '../components/PageLayout';
+import imgPawtrace from '../assets/project-previews/pawtrace.png';
+import imgCardiq from '../assets/project-previews/cardiq.png';
 import imgValuedex from '../assets/project-previews/valuedex.png';
 import imgQuantara from '../assets/project-previews/quantara.png';
-import imgCoursecraft from '../assets/project-previews/coursecraft.svg';
+import imgCoursecraft from '../assets/project-previews/coursecraft.png';
 import imgQhacks from '../assets/project-previews/qhacks2025.png';
 import imgUofthacks from '../assets/project-previews/uofthacks.png';
 import imgTracksite from '../assets/project-previews/tracksite.png';
@@ -13,6 +15,28 @@ import imgWebsite from '../assets/project-previews/website.png';
 import '../styles/Projects.css';
 
 const projects = [
+  {
+    id: 'pawtrace',
+    name: 'PawTrace',
+    demoUrl: 'https://devpost.com/software/tailsignal',
+    demoLabel: 'devpost',
+    image: imgPawtrace,
+    description: 'Missing-pet search platform — Hack the North winner.',
+    detail:
+      'PawTrace combines community sightings and available camera footage to determine where a lost pet is most likely to be, turning scattered reports into a focused search area on a live map.',
+    tags: ['Hack the North', 'Winner'],
+  },
+  {
+    id: 'visualise-it',
+    name: 'Visualise It',
+    repoUrl: 'https://github.com/joeyhlu/qhacks2025',
+    image: imgQhacks,
+    description: 'Real-time design visualisation with GenAI — QHacks Best Mayor\'s Innovation Challenge.',
+    detail:
+      'Python pipeline with PyTorch, OpenCV, and Hugging Face; LLM/GenAI APIs for generative features; dynamic masking from pose landmarks, segmentation, and contours with homography for aligned real-time overlays.',
+    tags: ['Python', 'PyTorch', 'OpenCV', 'HuggingFace'],
+    starSource: { owner: 'joeyhlu', repo: 'qhacks2025' },
+  },
   {
     id: 'valuedex',
     name: 'ValueDex',
@@ -24,6 +48,17 @@ const projects = [
       'Full-stack app: Next.js 14, TypeScript, Tailwind, Recharts on the frontend; FastAPI, SQLAlchemy, Pandas, scikit-learn on the backend. SQLite for dev, PostgreSQL for prod. Search cards, price history, predictions, and investment-style ratings via a documented API. Live at valuedex.ca.',
     tags: ['Next.js', 'TypeScript', 'FastAPI', 'ML', 'PostgreSQL'],
     starSource: { owner: 'jkhatri23', repo: 'Valuedex' },
+  },
+  {
+    id: 'cardiq',
+    name: 'CardIQ',
+    repoUrl: 'https://github.com/cursingparrot4/HT6-Payment-Optimization',
+    image: imgCardiq,
+    description: 'Work in progress — routes recurring payments to the best card for your priorities: rewards, credit score, welcome bonuses, fees, and risk.',
+    detail:
+      'Work in progress. CardIQ came from a common problem: people have multiple cards and recurring bills, but it is hard to know which card should be used for each payment. The best card is not always the one with the highest rewards. Sometimes you want to protect your credit score, hit a welcome bonus, or care more about cash flow, avoiding fees, or making sure an important bill does not fail. CardIQ routes recurring payments like rent, utilities, insurance, subscriptions, and transit to the best card for your needs. You set a priority order for your bills and see how that order affects the recommended card; for each payment it compares available cards on rewards, bonus progress, fees, utilization, available credit, and risk. You can also describe your goals in plain language — for example, that you are applying for a mortgage and want to keep utilization low — and CardIQ turns that into priorities the optimizer can use.',
+    tags: ['Python', 'FastAPI', 'Next.js', 'TypeScript'],
+    starSource: { owner: 'cursingparrot4', repo: 'HT6-Payment-Optimization' },
   },
   {
     id: 'quantara',
@@ -41,22 +76,11 @@ const projects = [
     name: 'CourseCraft',
     repoUrl: 'https://github.com/joeyhlu/coursecraft',
     image: imgCoursecraft,
-    description: 'Smart course scheduling — natural-language preferences, ranked timetables, and Rate My Prof data.',
+    description: 'Say what you want and get a clean, optimized class schedule back.',
     detail:
-      'Express backend and vanilla HTML/CSS/JS frontend: natural-language planner, constraint-based schedule generation with walking-time checks, professor ratings inline, primary/backup courses, seat warnings, catalog browse, and a friends overlay to compare timetables.',
+      'Every semester is the same mess: refreshing the course portal, flipping between tabs, checking Rate My Professor, trying to avoid 8 AMs, and texting friends to see what they are taking. The system technically works, but it feels like it has not changed in 20 years. The bigger issue is that your schedule shapes your semester — bad time slots, exhausting back-to-backs, or poorly rated professors affect your energy, focus, and sometimes your grades, and small decisions during course selection compound over four months. Instead of clicking through dropdowns and manually testing sections for conflicts, CourseCraft lets you just say what you want and get a clean, optimized schedule back.',
     tags: ['Node.js', 'Express', 'JavaScript'],
     starSource: { owner: 'joeyhlu', repo: 'coursecraft' },
-  },
-  {
-    id: 'visualise-it',
-    name: 'Visualise It',
-    repoUrl: 'https://github.com/joeyhlu/qhacks2025',
-    image: imgQhacks,
-    description: 'Real-time design visualisation with GenAI — QHacks Best Mayor\'s Innovation Challenge.',
-    detail:
-      'Python pipeline with PyTorch, OpenCV, and Hugging Face; LLM/GenAI APIs for generative features; dynamic masking from pose landmarks, segmentation, and contours with homography for aligned real-time overlays.',
-    tags: ['Python', 'PyTorch', 'OpenCV', 'HuggingFace'],
-    starSource: { owner: 'joeyhlu', repo: 'qhacks2025' },
   },
   {
     id: 'proteccapi',
@@ -155,9 +179,11 @@ const Projects = () => {
     <PageLayout title="stuff i've built">
       <div className="projects-list">
         {projects.map(project => {
-          const key = `${project.starSource.owner}/${project.starSource.repo}`;
-          const starCount = stars[key];
+          const starCount = project.starSource
+            ? stars[`${project.starSource.owner}/${project.starSource.repo}`]
+            : undefined;
           const isOpen = openId === project.id;
+          const primaryUrl = project.repoUrl || project.demoUrl;
 
           return (
             <div key={project.id} className={`project-item${isOpen ? ' project-item--open' : ''}`}>
@@ -197,7 +223,7 @@ const Projects = () => {
               >
                 <div className="project-panel-inner">
                   <a
-                    href={project.repoUrl}
+                    href={primaryUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="project-panel-img-link"
@@ -207,9 +233,13 @@ const Projects = () => {
                   <div className="project-panel-copy">
                     <p className="project-detail">{project.detail}</p>
                     <div className="project-panel-links">
-                      <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">github</a>
+                      {project.repoUrl && (
+                        <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">github</a>
+                      )}
                       {project.demoUrl && (
-                        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">live site</a>
+                        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                          {project.demoLabel || 'live site'}
+                        </a>
                       )}
                     </div>
                   </div>
