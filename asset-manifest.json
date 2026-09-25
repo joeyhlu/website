@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.a4566a23.css",
-    "main.js": "/static/js/main.f4ba3b6e.js",
+    "main.js": "/static/js/main.144c2963.js",
     "static/media/SoundVeil.png": "/static/media/SoundVeil.3c98bf33fedaf8cdc719.png",
     "static/media/website.png": "/static/media/website.1313fd61c46b6e1d2273.png",
     "static/media/stubook_master.png": "/static/media/stubook_master.58cce9016cde0a317c51.png",
+    "static/media/pawtrace.png": "/static/media/pawtrace.0bdb5c72d4b8ce984e68.png",
     "static/media/qhacks2025.png": "/static/media/qhacks2025.dfaa8584bc8fc76d70f4.png",
     "static/media/coursecraft.png": "/static/media/coursecraft.d6558e95707e50f08406.png",
     "static/media/tracksite.png": "/static/media/tracksite.936b0441f5f05f7d273e.png",
@@ -14,10 +15,10 @@
     "static/media/quantara.png": "/static/media/quantara.d7624ae690f49d7744bd.png",
     "index.html": "/index.html",
     "main.a4566a23.css.map": "/static/css/main.a4566a23.css.map",
-    "main.f4ba3b6e.js.map": "/static/js/main.f4ba3b6e.js.map"
+    "main.144c2963.js.map": "/static/js/main.144c2963.js.map"
   },
   "entrypoints": [
     "static/css/main.a4566a23.css",
-    "static/js/main.f4ba3b6e.js"
+    "static/js/main.144c2963.js"
   ]
 }
