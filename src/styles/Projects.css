@@ -7,6 +7,7 @@
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: 2rem 1.5rem;
 }
 
@@ -81,9 +82,13 @@
   margin-top: 0.25rem;
 }
 
+.project-card .project-tags {
+  margin-top: 0.625rem;
+}
+
 .project-card .project-desc {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

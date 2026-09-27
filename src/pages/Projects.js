@@ -21,17 +21,17 @@ const projects = [
     demoUrl: 'https://devpost.com/software/tailsignal',
     demoLabel: 'devpost',
     image: imgPawtrace,
-    description: 'Missing-pet search platform — Hack the North winner.',
+    description: 'Missing-pet search platform. Hack the North winner.',
     detail:
       'PawTrace combines community sightings and available camera footage to determine where a lost pet is most likely to be, turning scattered reports into a focused search area on a live map.',
-    tags: ['Hack the North', 'Winner'],
+    tags: ['Python', 'Elasticsearch', 'Node.js'],
   },
   {
     id: 'visualise-it',
     name: 'Visualise It',
     repoUrl: 'https://github.com/joeyhlu/qhacks2025',
     image: imgQhacks,
-    description: 'Real-time design visualisation with GenAI — QHacks Best Mayor\'s Innovation Challenge.',
+    description: 'Real-time design visualisation with GenAI. QHacks Best Mayor\'s Innovation Challenge.',
     detail:
       'Python pipeline with PyTorch, OpenCV, and Hugging Face; LLM/GenAI APIs for generative features; dynamic masking from pose landmarks, segmentation, and contours with homography for aligned real-time overlays.',
     tags: ['Python', 'PyTorch', 'OpenCV', 'HuggingFace'],
@@ -43,7 +43,7 @@ const projects = [
     repoUrl: 'https://github.com/jkhatri23/Valuedex',
     demoUrl: 'https://valuedex.ca',
     image: imgValuedex,
-    description: 'Pokémon card value predictor — historical market data and ML to forecast prices. 1000+ users.',
+    description: 'Pokémon card value predictor that uses historical market data and ML to forecast prices. 1000+ users.',
     detail:
       'Full-stack app: Next.js 14, TypeScript, Tailwind, Recharts on the frontend; FastAPI, SQLAlchemy, Pandas, scikit-learn on the backend. SQLite for dev, PostgreSQL for prod. Search cards, price history, predictions, and investment-style ratings via a documented API. Live at valuedex.ca.',
     tags: ['Next.js', 'TypeScript', 'FastAPI', 'ML', 'PostgreSQL'],
@@ -54,9 +54,9 @@ const projects = [
     name: 'CardIQ',
     repoUrl: 'https://github.com/cursingparrot4/HT6-Payment-Optimization',
     image: imgCardiq,
-    description: 'Work in progress — routes recurring payments to the best card for your priorities: rewards, credit score, welcome bonuses, fees, and risk.',
+    description: 'Work in progress. Routes recurring payments to the best card for your priorities: rewards, credit score, welcome bonuses, fees, and risk.',
     detail:
-      'Work in progress. CardIQ came from a common problem: people have multiple cards and recurring bills, but it is hard to know which card should be used for each payment. The best card is not always the one with the highest rewards. Sometimes you want to protect your credit score, hit a welcome bonus, or care more about cash flow, avoiding fees, or making sure an important bill does not fail. CardIQ routes recurring payments like rent, utilities, insurance, subscriptions, and transit to the best card for your needs. You set a priority order for your bills and see how that order affects the recommended card; for each payment it compares available cards on rewards, bonus progress, fees, utilization, available credit, and risk. You can also describe your goals in plain language — for example, that you are applying for a mortgage and want to keep utilization low — and CardIQ turns that into priorities the optimizer can use.',
+      'Work in progress. CardIQ came from a common problem: people have multiple cards and recurring bills, but it is hard to know which card should be used for each payment. The best card is not always the one with the highest rewards. Sometimes you want to protect your credit score, hit a welcome bonus, or care more about cash flow, avoiding fees, or making sure an important bill does not fail. CardIQ routes recurring payments like rent, utilities, insurance, subscriptions, and transit to the best card for your needs. You set a priority order for your bills and see how that order affects the recommended card; for each payment it compares available cards on rewards, bonus progress, fees, utilization, available credit, and risk. You can also describe your goals in plain language, for example that you are applying for a mortgage and want to keep utilization low, and CardIQ turns that into priorities the optimizer can use.',
     tags: ['Python', 'FastAPI', 'Next.js', 'TypeScript'],
     starSource: { owner: 'cursingparrot4', repo: 'HT6-Payment-Optimization' },
   },
@@ -78,7 +78,7 @@ const projects = [
     image: imgCoursecraft,
     description: 'Say what you want and get a clean, optimized class schedule back.',
     detail:
-      'Every semester is the same mess: refreshing the course portal, flipping between tabs, checking Rate My Professor, trying to avoid 8 AMs, and texting friends to see what they are taking. The system technically works, but it feels like it has not changed in 20 years. The bigger issue is that your schedule shapes your semester — bad time slots, exhausting back-to-backs, or poorly rated professors affect your energy, focus, and sometimes your grades, and small decisions during course selection compound over four months. Instead of clicking through dropdowns and manually testing sections for conflicts, CourseCraft lets you just say what you want and get a clean, optimized schedule back.',
+      'Every semester is the same mess: refreshing the course portal, flipping between tabs, checking Rate My Professor, trying to avoid 8 AMs, and texting friends to see what they are taking. The system technically works, but it feels like it has not changed in 20 years. The bigger issue is that your schedule shapes your semester: bad time slots, exhausting back-to-backs, or poorly rated professors affect your energy, focus, and sometimes your grades, and small decisions during course selection compound over four months. Instead of clicking through dropdowns and manually testing sections for conflicts, CourseCraft lets you just say what you want and get a clean, optimized schedule back.',
     tags: ['Node.js', 'Express', 'JavaScript'],
     starSource: { owner: 'joeyhlu', repo: 'coursecraft' },
   },
@@ -87,7 +87,7 @@ const projects = [
     name: 'ProteccAPI',
     repoUrl: 'https://github.com/joeyhlu/uofthacks',
     image: imgUofthacks,
-    description: 'NPM package and VSCode extension for API key security — 100+ downloads.',
+    description: 'NPM package and VSCode extension for API key security. 100+ downloads.',
     detail:
       'Developer tooling to reduce accidental key leaks in repos and local workflows; shipped as an NPM package and editor integration for UofTHacks 12.',
     tags: ['Node.js', 'React', 'CSS'],
@@ -98,7 +98,7 @@ const projects = [
     name: 'Track Site',
     repoUrl: 'https://github.com/joeyhlu/tracksite',
     image: imgTracksite,
-    description: 'Bookmark manager with folders — save and organise links in a simple web UI.',
+    description: 'Bookmark manager for saving and organising links in folders.',
     detail:
       'Django-backed bookmark organiser with folder hierarchies and quick add flows; Python server-side rendering and persistence for a lightweight alternative to heavy read-later apps.',
     tags: ['Python', 'Django'],
@@ -109,7 +109,7 @@ const projects = [
     name: 'SoundVeil',
     repoUrl: 'https://github.com/joeyhlu/SoundVeil',
     image: imgSoundVeil,
-    description: 'Audio steganography — hide messages inside sound files.',
+    description: 'Audio steganography that hides messages inside sound files.',
     detail:
       'React and Node.js tooling to embed and recover hidden payloads in audio; explores encoding strategies and a simple UI for experimenting with steganography on WAV or browser-friendly formats.',
     tags: ['React', 'Node.js'],
@@ -120,7 +120,7 @@ const projects = [
     name: 'Stubook',
     repoUrl: 'https://github.com/joeyhlu/stubook_master',
     image: imgStubook,
-    description: 'Cross-platform study app for iOS and Android — ~100 downloads.',
+    description: 'Cross-platform study app for iOS and Android. ~100 downloads.',
     detail:
       'Mobile study companion built with Flutter and native pieces (Swift/Kotlin) where needed; local and cloud-friendly patterns for notes, decks, and session tracking with a NoSQL-oriented data model.',
     tags: ['Swift', 'Flutter', 'Kotlin', 'NoSQL'],
@@ -131,7 +131,7 @@ const projects = [
     name: 'Personal Website',
     repoUrl: 'https://github.com/joeyhlu/website',
     image: imgWebsite,
-    description: 'This portfolio — React, routing, and a clean reading experience.',
+    description: 'This portfolio, built with React.',
     detail:
       'The site you are on: client-side routing, project showcase, and deployment tuned for a custom domain on static hosting.',
     tags: ['React', 'JavaScript'],
@@ -211,6 +211,11 @@ const Projects = () => {
                 {starCount > 0 && <span className="project-stars">{starCount}</span>}
               </h3>
               <p className="project-desc">{project.description}</p>
+              <div className="project-tags">
+                {project.tags.map(tag => (
+                  <span key={tag} className="tag">{tag}</span>
+                ))}
+              </div>
             </button>
           );
         })}

@@ -30,8 +30,8 @@ const Home = () => {
           <li className="section-label">things i&apos;ve built:</li>
         </ul>
         <ul className="sub-list">
-          <li><a href="https://devpost.com/software/tailsignal" target="_blank" rel="noopener noreferrer"><strong>PawTrace</strong></a>, a missing-pet search platform &mdash; Hack the North winner</li>
-          <li><a href="https://github.com/joeyhlu/qhacks2025" target="_blank" rel="noopener noreferrer"><strong>Visualise It</strong></a>, real-time design visualisation with GenAI &mdash; QHacks winner</li>
+          <li><a href="https://devpost.com/software/tailsignal" target="_blank" rel="noopener noreferrer"><strong>PawTrace</strong></a>, a missing-pet search platform (Hack the North winner)</li>
+          <li><a href="https://github.com/joeyhlu/qhacks2025" target="_blank" rel="noopener noreferrer"><strong>Visualise It</strong></a>, real-time design visualisation with GenAI (QHacks winner)</li>
           <li><a href="https://valuedex.ca" target="_blank" rel="noopener noreferrer"><strong>ValueDex</strong></a>, a Pokémon card price predictor (1000+ users)</li>
         </ul>
 
