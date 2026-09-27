@@ -27,17 +27,6 @@ const projects = [
     tags: ['Python', 'Elasticsearch', 'Node.js'],
   },
   {
-    id: 'visualise-it',
-    name: 'Visualise It',
-    repoUrl: 'https://github.com/joeyhlu/qhacks2025',
-    image: imgQhacks,
-    description: 'Real-time design visualisation with GenAI. QHacks Best Mayor\'s Innovation Challenge.',
-    detail:
-      'Python pipeline with PyTorch, OpenCV, and Hugging Face; LLM/GenAI APIs for generative features; dynamic masking from pose landmarks, segmentation, and contours with homography for aligned real-time overlays.',
-    tags: ['Python', 'PyTorch', 'OpenCV', 'HuggingFace'],
-    starSource: { owner: 'joeyhlu', repo: 'qhacks2025' },
-  },
-  {
     id: 'valuedex',
     name: 'ValueDex',
     repoUrl: 'https://github.com/jkhatri23/Valuedex',
@@ -48,6 +37,17 @@ const projects = [
       'Full-stack app: Next.js 14, TypeScript, Tailwind, Recharts on the frontend; FastAPI, SQLAlchemy, Pandas, scikit-learn on the backend. SQLite for dev, PostgreSQL for prod. Search cards, price history, predictions, and investment-style ratings via a documented API. Live at valuedex.ca.',
     tags: ['Next.js', 'TypeScript', 'FastAPI', 'ML', 'PostgreSQL'],
     starSource: { owner: 'jkhatri23', repo: 'Valuedex' },
+  },
+  {
+    id: 'visualise-it',
+    name: 'Visualise It',
+    repoUrl: 'https://github.com/joeyhlu/qhacks2025',
+    image: imgQhacks,
+    description: 'Real-time design visualisation with GenAI. QHacks Best Mayor\'s Innovation Challenge.',
+    detail:
+      'Python pipeline with PyTorch, OpenCV, and Hugging Face; LLM/GenAI APIs for generative features; dynamic masking from pose landmarks, segmentation, and contours with homography for aligned real-time overlays.',
+    tags: ['Python', 'PyTorch', 'OpenCV', 'HuggingFace'],
+    starSource: { owner: 'joeyhlu', repo: 'qhacks2025' },
   },
   {
     id: 'cardiq',
@@ -192,7 +192,6 @@ const Projects = () => {
 
   return (
     <PageLayout title="stuff i've built">
-      <p className="projects-hint">Click a project to see more.</p>
       <div className="projects-grid">
         {projects.map(project => {
           const starCount = starsFor(project);
@@ -205,6 +204,7 @@ const Projects = () => {
             >
               <div className="project-card-img">
                 <img src={project.image} alt={`${project.name} preview`} loading="lazy" />
+                <span className="project-card-overlay" aria-hidden>View details</span>
               </div>
               <h3 className="project-name">
                 {project.name}
@@ -215,6 +215,11 @@ const Projects = () => {
                 {project.tags.map(tag => (
                   <span key={tag} className="tag">{tag}</span>
                 ))}
+              </div>
+              <div className="project-card-footer">
+                <span className="project-card-more">
+                  view details <span className="project-card-more-arrow">&rarr;</span>
+                </span>
               </div>
             </button>
           );
