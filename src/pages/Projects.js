@@ -43,7 +43,7 @@ const projects = [
     repoUrl: 'https://github.com/jkhatri23/Valuedex',
     demoUrl: 'https://valuedex.ca',
     image: imgValuedex,
-    description: 'Pokémon card value predictor — historical market data and ML to forecast prices.',
+    description: 'Pokémon card value predictor — historical market data and ML to forecast prices. 1000+ users.',
     detail:
       'Full-stack app: Next.js 14, TypeScript, Tailwind, Recharts on the frontend; FastAPI, SQLAlchemy, Pandas, scikit-learn on the backend. SQLite for dev, PostgreSQL for prod. Search cards, price history, predictions, and investment-style ratings via a documented API. Live at valuedex.ca.',
     tags: ['Next.js', 'TypeScript', 'FastAPI', 'ML', 'PostgreSQL'],
@@ -171,84 +171,87 @@ const Projects = () => {
     fetchStars();
   }, []);
 
-  const toggle = useCallback(id => {
-    setOpenId(prev => (prev === id ? null : id));
-  }, []);
+  const close = useCallback(() => setOpenId(null), []);
+
+  useEffect(() => {
+    if (!openId) return undefined;
+    const onKey = e => {
+      if (e.key === 'Escape') close();
+    };
+    document.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [openId, close]);
+
+  const openProject = projects.find(p => p.id === openId);
+  const starsFor = project =>
+    project.starSource ? stars[`${project.starSource.owner}/${project.starSource.repo}`] : undefined;
 
   return (
     <PageLayout title="stuff i've built">
-      <div className="projects-list">
+      <p className="projects-hint">Click a project to see more.</p>
+      <div className="projects-grid">
         {projects.map(project => {
-          const starCount = project.starSource
-            ? stars[`${project.starSource.owner}/${project.starSource.repo}`]
-            : undefined;
-          const isOpen = openId === project.id;
-          const primaryUrl = project.repoUrl || project.demoUrl;
-
+          const starCount = starsFor(project);
           return (
-            <div key={project.id} className={`project-item${isOpen ? ' project-item--open' : ''}`}>
-              <button
-                type="button"
-                className="project-row-head"
-                onClick={() => toggle(project.id)}
-                aria-expanded={isOpen}
-                aria-controls={`panel-${project.id}`}
-                id={`head-${project.id}`}
-              >
-                <span className="project-chevron" aria-hidden>{isOpen ? '\u2212' : '+'}</span>
-                <div className="project-main">
-                  <h3 className="project-name">
-                    {project.name}
-                    {starCount > 0 && <span className="project-stars">{starCount}</span>}
-                  </h3>
-                  <p className="project-desc">{project.description}</p>
-                </div>
-                <div className="project-tags" onClick={e => e.stopPropagation()}>
-                  {project.tags.map(tag => (
-                    <span key={tag} className="tag">{tag}</span>
-                  ))}
-                </div>
-              </button>
-
-              <div className="project-hover-preview" aria-hidden>
-                <img src={project.image} alt="" />
+            <button
+              key={project.id}
+              type="button"
+              className="project-card"
+              onClick={() => setOpenId(project.id)}
+            >
+              <div className="project-card-img">
+                <img src={project.image} alt={`${project.name} preview`} loading="lazy" />
               </div>
-
-              <div
-                id={`panel-${project.id}`}
-                role="region"
-                aria-labelledby={`head-${project.id}`}
-                className="project-panel"
-                hidden={!isOpen}
-              >
-                <div className="project-panel-inner">
-                  <a
-                    href={primaryUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-panel-img-link"
-                  >
-                    <img src={project.image} alt={`${project.name} preview`} />
-                  </a>
-                  <div className="project-panel-copy">
-                    <p className="project-detail">{project.detail}</p>
-                    <div className="project-panel-links">
-                      {project.repoUrl && (
-                        <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">github</a>
-                      )}
-                      {project.demoUrl && (
-                        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                          {project.demoLabel || 'live site'}
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+              <h3 className="project-name">
+                {project.name}
+                {starCount > 0 && <span className="project-stars">{starCount}</span>}
+              </h3>
+              <p className="project-desc">{project.description}</p>
+            </button>
           );
         })}
       </div>
+
+      {openProject && (
+        <div className="project-modal-backdrop" onClick={close}>
+          <div
+            className="project-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="project-modal-title"
+            onClick={e => e.stopPropagation()}
+          >
+            <button type="button" className="project-modal-close" onClick={close} aria-label="Close">
+              &times;
+            </button>
+            <img src={openProject.image} alt={`${openProject.name} preview`} className="project-modal-img" />
+            <div className="project-modal-body">
+              <h2 id="project-modal-title">{openProject.name}</h2>
+              <p className="project-desc">{openProject.description}</p>
+              <p className="project-detail">{openProject.detail}</p>
+              <div className="project-tags">
+                {openProject.tags.map(tag => (
+                  <span key={tag} className="tag">{tag}</span>
+                ))}
+              </div>
+              <div className="project-panel-links">
+                {openProject.repoUrl && (
+                  <a href={openProject.repoUrl} target="_blank" rel="noopener noreferrer">github</a>
+                )}
+                {openProject.demoUrl && (
+                  <a href={openProject.demoUrl} target="_blank" rel="noopener noreferrer">
+                    {openProject.demoLabel || 'live site'}
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </PageLayout>
   );
 };

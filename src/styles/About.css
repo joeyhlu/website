@@ -123,10 +123,9 @@
 .about-section:nth-child(6) { animation-delay: 0.45s; }
 
 .about-section h2 {
-  font-family: 'Libre Baskerville', Georgia, serif;
   font-size: 1.05rem;
-  font-style: italic;
-  font-weight: 400;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   color: var(--text-primary);
   margin-bottom: 1rem;
 }

@@ -8,7 +8,6 @@ const Home = () => {
       <header className="header">
         <div className="header-left">
           <Link to="/" className="logo">joey lu</Link>
-          <span className="tagline">building things that work</span>
         </div>
         <nav className="nav-links">
           <Link to="/about">me</Link>
@@ -18,23 +17,22 @@ const Home = () => {
 
       <main className="home-content">
         <p className="intro">
-          CS @ UWaterloo. Full-stack dev, AI, systems.
+          Software and ML engineer constantly exploring and pushing the boundaries of tech.
         </p>
 
         <ul className="top-list">
+          <li>CS <a href="https://uwaterloo.ca" target="_blank" rel="noopener noreferrer"><strong>@UWaterloo</strong></a></li>
           <li>SWE Intern <a href="https://www.telus.com" target="_blank" rel="noopener noreferrer"><strong>@TELUS</strong></a></li>
           <li>Claude Campus Ambassador <a href="https://anthropic.com" target="_blank" rel="noopener noreferrer"><strong>@Anthropic</strong></a></li>
         </ul>
 
         <ul className="top-list">
-          <li className="section-label">what i've been building:</li>
+          <li className="section-label">things i&apos;ve built:</li>
         </ul>
         <ul className="sub-list">
-          <li>built <a href="https://devpost.com/software/tailsignal" target="_blank" rel="noopener noreferrer"><strong>PawTrace</strong></a>, a missing-pet search platform &mdash; Hack the North winner</li>
-          <li>built <a href="https://github.com/jkhatri23/Valuedex" target="_blank" rel="noopener noreferrer"><strong>ValueDex</strong></a>, a Pokémon card value predictor with ML (<a href="https://valuedex.ca" target="_blank" rel="noopener noreferrer">valuedex.ca</a>)</li>
-          <li>built <a href="https://github.com/achitaan/Quantara" target="_blank" rel="noopener noreferrer"><strong>Quantara</strong></a>, a full-stack trading platform with WebSockets, sentiment, and Dockerized services</li>
-          <li>built <a href="https://github.com/joeyhlu/qhacks2025" target="_blank" rel="noopener noreferrer"><strong>Visualise It</strong></a>, real-time design visualisation with GenAI &mdash; QHacks Mayor&apos;s Innovation Challenge</li>
-          <li>built <a href="https://github.com/joeyhlu/uofthacks" target="_blank" rel="noopener noreferrer"><strong>ProteccAPI</strong></a>, NPM + VSCode tooling for API key security (100+ downloads)</li>
+          <li><a href="https://devpost.com/software/tailsignal" target="_blank" rel="noopener noreferrer"><strong>PawTrace</strong></a>, a missing-pet search platform &mdash; Hack the North winner</li>
+          <li><a href="https://github.com/joeyhlu/qhacks2025" target="_blank" rel="noopener noreferrer"><strong>Visualise It</strong></a>, real-time design visualisation with GenAI &mdash; QHacks winner</li>
+          <li><a href="https://valuedex.ca" target="_blank" rel="noopener noreferrer"><strong>ValueDex</strong></a>, a Pokémon card price predictor (1000+ users)</li>
         </ul>
 
         <ul className="top-list">
@@ -49,6 +47,10 @@ const Home = () => {
         <div className="cta-section">
           <Link to="/about" className="cta-button">
             <span className="cta-text">more about me</span>
+            <span className="cta-arrow">&rarr;</span>
+          </Link>
+          <Link to="/projects" className="cta-button">
+            <span className="cta-text">see my projects</span>
             <span className="cta-arrow">&rarr;</span>
           </Link>
         </div>
