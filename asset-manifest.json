@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.08b39277.css",
-    "main.js": "/static/js/main.fb005909.js",
+    "main.css": "/static/css/main.b64eaaef.css",
+    "main.js": "/static/js/main.c9427ab5.js",
     "static/media/SoundVeil.png": "/static/media/SoundVeil.3c98bf33fedaf8cdc719.png",
     "static/media/website.png": "/static/media/website.1313fd61c46b6e1d2273.png",
     "static/media/stubook_master.png": "/static/media/stubook_master.58cce9016cde0a317c51.png",
@@ -14,11 +14,11 @@
     "static/media/cardiq.png": "/static/media/cardiq.2831a8feffc8ff333846.png",
     "static/media/quantara.png": "/static/media/quantara.d7624ae690f49d7744bd.png",
     "index.html": "/index.html",
-    "main.08b39277.css.map": "/static/css/main.08b39277.css.map",
-    "main.fb005909.js.map": "/static/js/main.fb005909.js.map"
+    "main.b64eaaef.css.map": "/static/css/main.b64eaaef.css.map",
+    "main.c9427ab5.js.map": "/static/js/main.c9427ab5.js.map"
   },
   "entrypoints": [
-    "static/css/main.08b39277.css",
-    "static/js/main.fb005909.js"
+    "static/css/main.b64eaaef.css",
+    "static/js/main.c9427ab5.js"
   ]
 }
